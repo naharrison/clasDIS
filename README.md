@@ -1,6 +1,10 @@
 # clasDIS
 Pythia based Deep Inelastic Scattering event generator for CLAS
 
+Compiles but doesn't run.
+Most likely a problem with clas-trunk;
+Probably need to compile it, not just download a copy (see https://github.com/naharrison/docker-clas6).
+
 ## Requirements
 python2-scons.noarch <br>
 gcc-gfortran.x86_64 <br>
