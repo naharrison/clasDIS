@@ -1,0 +1,1 @@
+./depends/LinuxRHEL3/clasDIS.dd /group/gpd/topdir/lib/LinuxRHEL3/clasDIS.o:  clasDIS.F names.inc claslepto.inc ntupgkoko.inc

@@ -1,0 +1,6 @@
+# use A.Kotzinian's code option 2 (Cahn cos+cos2) --lst37 2
+# use average k_T=0.6 --parl3 0.6
+# use pDFgrsv2000 hep-ph/0011215 --lst15 145
+# write data files --datf
+# electron angles --t 7.0 180.0
+./clasdis --trig 200000 --t 7.0 180.0  --beam 11000 --lst37 2 --parl3 0.6 --datf --lst15 145

@@ -1,0 +1,18 @@
+from build_system import environment
+from build_system.config.clas6 import load_flags
+import glob
+
+clasdis_env = environment.env(deps='cern')
+clasdis_env.load_dependency('cern')
+load_flags(clasdis_env)
+
+clasdis_sources = """jetset.F pepsi423.F lepto.F leptoak.F lpriktak.F lflav.F 
+                     polleptox.F akdn.F dnstrf.F newpdfs.F parton.F accepteg1.F  
+                     clasDIS.F getcos.F elacc_newnew.F lambda.F  write2filed.F write2filep.F radgen.F parjset4hermes.F""".split()
+
+#clasdis_sources = glob.glob('*.F')
+
+#clasdis_source.remove("notwanted.F")
+
+clasdis_env.program('clasdis', source=clasdis_sources)
+

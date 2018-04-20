@@ -1,0 +1,39 @@
+OBJ=   jetset.o pepsi423.o lepto.o leptoak.o lpriktak.o lflav.o polleptox.o akdn.o dnstrf.o newpdfs.o parton.o accepteg1.o  clasDIS.o getcos.o elacc_newnew.o lambda.o  write2filed.o write2filep.o radgen.o parjset4hermes.o
+
+# -lstdc++ for Gagik's stuff
+#
+FOR   =  -lstdc++ -lnsl -lcrypt -ldl
+CERNLIBS =  -L/usr/lib64/cernlib/2006/lib -lmathlib  -lpacklib 
+  
+clasdis : $(OBJ)
+	 gfortran  -o	clasdis  $(OBJ) $(CERNLIBS) $(FOR) 
+$(OBJ) : %.o: %.F
+	gfortran   -c $< -o $@  
+
+clean:
+	rm -f clasdis   $(OBJ)
+
+
+
+##g77  -O2 -fno-automatic -finit-local-zero -ffixed-line-length-none -fno-second-underscore \
+##        -DLinux \
+##        -I. -I./ -I/group/clas/builds/release-4-14/packages/include -I/group/clas/builds/release-4-14/packages/inc_derived -I/apps/tcl/include -I/usr/X11R6/include -c \
+##        aac.F  -o /home/avakian/w6/tmp/obj/LinuxRHEL3/generator/aac.o
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
